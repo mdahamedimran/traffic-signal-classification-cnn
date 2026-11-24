@@ -1,0 +1,2 @@
+Model,Evaluation Split,Accuracy (%),Macro Precision,Macro Recall,Macro F1-score,Weighted F1-score,Validation Loss
+CNN with Augmentation and Class Weight,Validation,100.0,1.0,1.0,1.0,1.0,6.366616435116157e-05

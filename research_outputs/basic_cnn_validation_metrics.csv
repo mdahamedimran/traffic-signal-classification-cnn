@@ -1,0 +1,2 @@
+Model,Evaluation Split,Accuracy (%),Macro Precision,Macro Recall,Macro F1-score,Weighted F1-score,Validation Loss
+Basic CNN,Validation,100.0,1.0,1.0,1.0,1.0,0.0005235357093624771

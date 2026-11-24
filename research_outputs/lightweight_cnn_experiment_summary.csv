@@ -1,0 +1,2 @@
+Experiment,Model,Total Parameters,Completed Epochs,Best Epoch,Training Accuracy,Validation Accuracy,Training Loss,Validation Loss,Training Time (Seconds),Parameter Reduction (%)
+EXP_05_Lightweight_CNN,Proposed Lightweight CNN,110147,17,12,0.996666669845581,0.9994444251060486,0.015326033346354961,0.0025286716409027576,63.64875043700067,90.35776595213855

@@ -1,0 +1,2 @@
+Experiment,Model,Total Parameters,Completed Epochs,Best Epoch,Training Accuracy,Validation Accuracy,Training Loss,Validation Loss,Training Time (Seconds)
+EXP_02_CNN_Augmentation,CNN with Augmentation,1142339,9,4,0.9989285469055176,1.0,0.004777831025421619,0.0002835786435753107,35.75103521100027

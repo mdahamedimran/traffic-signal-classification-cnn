@@ -1,0 +1,24 @@
+{
+    "Python": "3.13.16 (main, Oct  1 2026, 15:40:24) [GCC 13.3.0]",
+    "TensorFlow": "2.21.0",
+    "NumPy": "2.1.3",
+    "Pandas": "2.3.3",
+    "OpenCV": "4.14.0",
+    "Dataset": "LISA Traffic Light Dataset",
+    "Dataset URL": "https://www.kaggle.com/datasets/mbornoe/lisa-traffic-light-dataset",
+    "Random Seed": 42,
+    "Image Size": [
+        64,
+        64,
+        3
+    ],
+    "Total Images": 12000,
+    "Training Images": 8400,
+    "Validation Images": 1800,
+    "Testing Images": 1800,
+    "Class Mapping": {
+        "Red": 0,
+        "Yellow": 1,
+        "Green": 2
+    }
+}

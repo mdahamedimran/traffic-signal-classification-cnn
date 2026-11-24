@@ -1,0 +1,5 @@
+Class,Test,Train,Validation,Total
+Green,837,3779,968,5584
+Red,913,3779,785,5477
+Yellow,50,842,47,939
+Total,1800,8400,1800,12000

@@ -1,0 +1,2 @@
+Experiment,Model,Total Parameters,Completed Epochs,Best Epoch,Training Accuracy,Validation Accuracy,Training Loss,Validation Loss,Training Time (Seconds)
+EXP_01_Basic_CNN,Basic CNN,1142339,7,2,0.9973809719085693,1.0,0.012773102149367332,0.0005235357093624771,31.951005322000128

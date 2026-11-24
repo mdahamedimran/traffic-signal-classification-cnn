@@ -1,0 +1,2 @@
+Model,Evaluation Split,Accuracy (%),Macro Precision,Macro Recall,Macro F1-score,Weighted F1-score,Validation Loss
+Proposed Lightweight CNN,Validation,99.94444444444444,0.9930555555555555,0.9995753715498937,0.9962787785269419,0.9994471913797667,0.0025286716409027576

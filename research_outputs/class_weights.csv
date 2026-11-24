@@ -1,0 +1,4 @@
+Class,Class ID,Training Images,Class Weight
+Red,0,3779,0.7409
+Yellow,1,842,3.3254
+Green,2,3779,0.7409
