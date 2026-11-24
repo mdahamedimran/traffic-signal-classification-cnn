@@ -2,10 +2,11 @@
 
 ## Project Overview
 
-This research investigates traffic signal classification using
-Convolutional Neural Networks (CNNs) on the LISA Traffic Light
-Dataset. Five CNN configurations are evaluated to compare
-classification performance and computational efficiency.
+This research investigates traffic signal classification
+using Convolutional Neural Networks (CNNs) on the LISA
+Traffic Light Dataset. Five CNN configurations are
+compared in terms of classification performance,
+generalization and parameter efficiency.
 
 ## Dataset
 
@@ -13,30 +14,47 @@ classification performance and computational efficiency.
 - Total Samples: 12,000
 - Training Samples: 8,400 (70%)
 - Validation Samples: 1,800 (15%)
-- Testing Samples: 1,800 (15%)
+- Independent Test Samples: 1,800 (15%)
 - Image Resolution: 64 × 64 × 3
-- Classes: Red, Yellow, Green
+- Classes: Red, Yellow and Green
 
 [Dataset Source](https://www.kaggle.com/datasets/mbornoe/lisa-traffic-light-dataset)
 
-## CNN Experiments
+## Experimental Results
 
-| ID | Model | Parameters | Validation Accuracy |
-|---|---|---:|---:|
-| EXP01 | Baseline CNN | 1,142,339 | 100% |
-| EXP02 | CNN + Data Augmentation | 1,142,339 | 100% |
-| EXP03 | CNN + Class Weighting | 1,142,339 | 100% |
-| EXP04 | CNN + Augmentation + Class Weighting | 1,142,339 | 100% |
-| EXP05 | Lightweight CNN | 110,147 | 99.94% |
+| Model | Validation Accuracy | Test Accuracy | Macro F1 | Parameters |
+|---|---:|---:|---:|---:|
+| EXP01 - Baseline | 100% | 97.06% | 86.48% | 1,142,339 |
+| EXP02 - Augmented | 100% | 96.50% | 85.13% | 1,142,339 |
+| EXP03 - Weighted | 100% | 98.89% | 93.90% | 1,142,339 |
+| EXP04 - Combined | 100% | 98.50% | 91.80% | 1,142,339 |
+| EXP05 - Lightweight | 99.94% | 98.22% | 94.48% | 110,147 |
 
 ## Key Findings
 
-- Four CNN configurations achieved 100% validation accuracy.
-- The lightweight CNN achieved 99.94% validation accuracy.
-- The lightweight model reduced trainable and non-trainable
-  parameters combined by approximately 90.36%.
-- Sequence-based dataset splitting was used to reduce data leakage.
-- Independent test evaluation is pending.
+- EXP03 achieved the highest independent test accuracy
+  of 98.89%.
+- EXP05 achieved the highest macro F1-score of 94.48%.
+- EXP05 achieved a macro recall of 98.75%.
+- EXP05 correctly classified all 50 actual Yellow
+  test samples.
+- The lightweight CNN reduced model parameters by 90.36%.
+- Class weighting improved independent test performance
+  compared with the baseline CNN.
+- Sequence-based splitting and exact duplicate checks
+  were performed to reduce data leakage.
+
+## Methodology
+
+1. Dataset collection and annotation filtering
+2. Traffic light bounding box extraction
+3. Image resizing and normalization
+4. Sequence-based dataset splitting
+5. CNN architecture development
+6. Data augmentation and class weighting
+7. Model training and validation
+8. Independent test evaluation
+9. Model performance and efficiency comparison
 
 ## Technologies Used
 
@@ -49,43 +67,47 @@ classification performance and computational efficiency.
 - Matplotlib
 - Seaborn
 - Scikit-learn
-- Kaggle GPU Environment
+- Kaggle
 
 ## Repository Structure
 
-```text
 traffic-signal-classification-cnn/
 ├── dataset/
+├── independent_test_results/
 ├── paper/
 ├── research_outputs/
 ├── saved_models/
 ├── .gitignore
 ├── README.md
 ├── requirements.txt
+├── independent-test-evaluation.ipynb
 └── traffic-signal-classification.ipynb
-```
 
-## Research Objectives
+## Research Limitations
 
-- Develop a CNN-based traffic signal classification system.
-- Investigate the effects of data augmentation.
-- Evaluate the impact of class weighting.
-- Compare classification performance across five models.
-- Develop a computationally efficient lightweight CNN.
+- The evaluation is limited to the LISA dataset.
+- The independent test set contains only 50 Yellow samples.
+- The models classify cropped traffic light images rather
+  than detecting traffic lights in full road scenes.
+- Further testing is required before real-world deployment.
 
 ## Research Status
 
 - [x] Dataset collection
 - [x] Data preprocessing
 - [x] Dataset splitting and leakage checks
-- [x] CNN model development
+- [x] CNN development
 - [x] Training and validation
 - [x] Model comparison
 - [x] Computational efficiency analysis
-- [ ] Independent test evaluation
+- [x] Independent test evaluation
+- [x] Classification reports
+- [x] Confusion matrices
+- [x] Research figures
+- [x] GitHub source code and results
 - [ ] Final research paper
 
 ## Research Paper
 
-The research paper will be uploaded to the `paper/` directory
-after the final evaluation is completed.
+The research paper is currently under preparation and
+will be available in the paper directory upon completion.
